@@ -10,6 +10,7 @@ __license__ = 'MIT'
 
 import time
 
+
 def sum_multiples(limit):
     """Sums all multiples of 3 and 5 under `limit`
 
@@ -20,6 +21,7 @@ def sum_multiples(limit):
         int : The sum of all multiples of 3 and 5 up to `limit`
     """
     return sum(x for x in range(limit) if x % 3 == 0 or x % 5 == 0)
+
 
 if __name__ == '__main__':
     START_TIME = time.time()
