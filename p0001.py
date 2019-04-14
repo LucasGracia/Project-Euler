@@ -1,6 +1,6 @@
 """
 Solution to Project Euler problem 1.
-    'Find the sum of all the multiples of 3 or 5 below 100'
+    'Find the sum of all the multiples of 3 or 5 below 1000'
 
 https://github.com/LucasGracia/Project-Euler
 """
@@ -9,7 +9,19 @@ __version__ = '1.0.0'
 __license__ = 'MIT'
 
 import time
+import argparse
 
+
+def process_arguments():
+    """Processes user-entered command line arguments
+
+    Returns:
+        args.l (int) : The limit to be passed to `sum_multiples`
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-l', type=int, default=1000, help='Sum limit')
+    args = parser.parse_args()
+    return args.l
 
 def sum_multiples(limit):
     """Sums all multiples of 3 and 5 under `limit`
@@ -26,7 +38,8 @@ def sum_multiples(limit):
 if __name__ == '__main__':
     START_TIME = time.time()
 
-    ANSWER = sum_multiples(1000)
+    LIMIT = process_arguments()
+    ANSWER = sum_multiples(LIMIT)
 
     END_TIME = time.time()
     print("Answer: {}\nTime: {}s".format(ANSWER, END_TIME - START_TIME))
