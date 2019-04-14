@@ -10,6 +10,19 @@ __version__ = '1.0.0'
 __license__ = 'MIT'
 
 import time
+import argparse
+
+
+def process_arguments():
+    """Processes user-entered command line arguments
+
+    Returns:
+        args.l (int) : The limit to be passed to `sum_fibs`
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-l', type=int, default=4000000, help='Sum limit')
+    args = parser.parse_args()
+    return args.l
 
 
 def sum_fibs(limit):
@@ -42,7 +55,8 @@ def sum_fibs(limit):
 if __name__ == '__main__':
     START_TIME = time.time()
 
-    ANSWER = sum_fibs(4000000)
+    LIMIT = process_arguments()
+    ANSWER = sum_fibs(LIMIT)
 
     END_TIME = time.time()
     print("Answer:  {}\nTime: {}s".format(ANSWER, END_TIME - START_TIME))
