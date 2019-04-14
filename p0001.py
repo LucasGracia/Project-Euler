@@ -1,6 +1,6 @@
 """
 Solution to Project Euler problem 1.
-'Find the sum of all the multiples of 3 or 5 below 100'
+    'Find the sum of all the multiples of 3 or 5 below 100'
 
 https://github.com/LucasGracia/Project-Euler
 """
