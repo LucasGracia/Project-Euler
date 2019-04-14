@@ -23,6 +23,6 @@ def sum_multiples(limit):
 
 if __name__ == '__main__':
     START_TIME = time.time()
-    answer = sum_multiples(1000)
+    ANSWER = sum_multiples(1000)
     END_TIME = time.time()
-    print("Answer: {}\nTime: {}s".format(answer, END_TIME - START_TIME))
+    print("Answer: {}\nTime: {}s".format(ANSWER, END_TIME - START_TIME))
