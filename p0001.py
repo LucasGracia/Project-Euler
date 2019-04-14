@@ -23,6 +23,7 @@ def process_arguments():
     args = parser.parse_args()
     return args.l
 
+
 def sum_multiples(limit):
     """Sums all multiples of 3 and 5 under `limit`
 
