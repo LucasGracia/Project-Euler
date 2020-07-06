@@ -42,3 +42,4 @@ if __name__ == '__main__':
 
     END_TIME = time.time()
     print("Answer: {}\nTime: {}s".format(ANSWER, END_TIME - START_TIME))
+    
