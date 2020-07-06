@@ -20,6 +20,6 @@ while len(str(current)) <= 1000:
     fibs.append(current)
 
 print("length of fibs =", len(fibs))
-print("index of the last number in fibs:", len(fibs)-1)
+print("index of the last number in fibs:", len(fibs) - 1)
 
-print ("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

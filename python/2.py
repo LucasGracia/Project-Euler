@@ -3,9 +3,9 @@ Solution to Project Euler problem 2.
     'By considering the terms in the Fibonacci sequence whose values
      do not exceed four million, find the sum of the even-valued terms.'
 """
-__author__ = 'Lucas Gracia'
-__version__ = '1.0.0'
-__license__ = 'MIT'
+__author__ = "Lucas Gracia"
+__version__ = "1.0.0"
+__license__ = "MIT"
 
 import time
 import argparse
@@ -18,7 +18,7 @@ def process_arguments():
         args.l (int) : The limit to be passed to `sum_fibs`
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-l', type=int, default=4000000, help='Sum limit')
+    parser.add_argument("-l", type=int, default=4000000, help="Sum limit")
     args = parser.parse_args()
     return args.l
 
@@ -50,7 +50,7 @@ def sum_fibs(limit):
     return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     START_TIME = time.time()
 
     LIMIT = process_arguments()

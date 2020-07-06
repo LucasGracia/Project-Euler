@@ -9,4 +9,4 @@ for character in str(number):
     count += int(character)
 
 print(count)
-print ("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

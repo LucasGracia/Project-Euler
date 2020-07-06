@@ -17,9 +17,9 @@ def isPalindrome(number):
 
 for x in range(1, 999):
     for y in range(1, 999):
-        if isPalindrome(x*y):
+        if isPalindrome(x * y):
             if x * y > palindrome:
                 palindrome = x * y
 
 print(palindrome)
-print ("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

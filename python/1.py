@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 """
 Solution to Project Euler problem 1.
     'Find the sum of all the multiples of 3 or 5 below 1000'
 """
-__author__ = 'Lucas Gracia'
-__version__ = '1.0.0'
-__license__ = 'MIT'
+__author__ = "Lucas Gracia"
+__version__ = "1.0.0"
+__license__ = "MIT"
 
 import time
 import argparse
@@ -17,7 +18,7 @@ def process_arguments():
         args.l (int) : The limit to be passed to `sum_multiples`
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('-l', type=int, default=1000, help='Sum limit')
+    parser.add_argument("-l", type=int, default=1000, help="Sum limit")
     args = parser.parse_args()
     return args.l
 
@@ -34,7 +35,7 @@ def sum_multiples(limit):
     return sum(x for x in range(limit) if x % 3 == 0 or x % 5 == 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     START_TIME = time.time()
 
     LIMIT = process_arguments()

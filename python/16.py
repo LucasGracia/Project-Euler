@@ -11,4 +11,4 @@ for character in str(power)[:]:
     total += int(character)
 
 print("Answer =", total)
-print("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

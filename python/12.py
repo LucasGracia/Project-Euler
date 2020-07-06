@@ -18,9 +18,9 @@ triangularNumber = 0
 for i in range(1, 100000):
     triangularNumber += i
     if len(factors(triangularNumber)) > 500:
-        print ("Answer =", triangularNumber)
+        print("Answer =", triangularNumber)
         break
     else:
-        print (i)
+        print(i)
 
-print("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

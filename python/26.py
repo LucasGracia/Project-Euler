@@ -21,4 +21,4 @@ for i in range(len(decimals)):
                     longest = len(pattern)
                     answer = i
 print(answer)
-print ("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

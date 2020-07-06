@@ -32,4 +32,4 @@ for i in range(28123 + 1):
         total += i
 print(total)
 
-print ("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

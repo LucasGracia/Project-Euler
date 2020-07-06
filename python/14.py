@@ -28,7 +28,7 @@ def collatzChain(number):
     return i
 
 
-for i in range(2, 1000000+1):
+for i in range(2, 1000000 + 1):
     workingLength = collatzChain(i)
     if workingLength > chainLength:
         chainLength = workingLength
@@ -36,4 +36,4 @@ for i in range(2, 1000000+1):
         print(i)
 
 print("Answer =", chainStart, ", length =", chainLength)
-print("Time =", time.time()-start, "s")
+print("Time =", time.time() - start, "s")

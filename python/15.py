@@ -10,5 +10,5 @@ n = 20  # Length of the y-axis
 
 Answer = (math.factorial(m + n)) / (math.factorial(m) * math.factorial(n))
 
-print ("Answer =", Answer)
-print ("Time =", time.time()-start, "s")
+print("Answer =", Answer)
+print("Time =", time.time() - start, "s")

@@ -21,5 +21,5 @@ while endPos < len(bigNumber):
         startPos += 1
         endPos += 1
 
-print (result)
-print ("Time =", time.time()-start, "s")
+print(result)
+print("Time =", time.time() - start, "s")

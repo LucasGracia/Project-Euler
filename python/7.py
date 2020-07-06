@@ -30,4 +30,4 @@ while len(primeList) != 10001:
         x += 2
 
 print("Answer: ", primeList[10000])
-print("Running Time: ", time.time()-startTime, " seconds")
+print("Running Time: ", time.time() - startTime, " seconds")
