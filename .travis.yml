@@ -1,7 +1,15 @@
-jobs:
+matrix:
   include:
-    - stage: python
-      language: python
+    - language: python
       python:
         - "3.7"
-      script: python3 python/1.py
+      before_install:
+        - cd python
+        - python --version
+        - pip install -U pip
+        - pip install -U pytest
+      install:
+        - pip install -r requirements.txt
+      before_script:
+        - cd python
+      script: pytest
