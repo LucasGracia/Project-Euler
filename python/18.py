@@ -1,6 +1,5 @@
 import time
 
-#Variables
 start = time.time()
 triangle = [[4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23],
             [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
@@ -18,16 +17,12 @@ triangle = [[4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23],
             [95, 64],
             [75]]
 
-for i in range(0,len(triangle)-1):
-    for x in range(0,len(triangle[i]) - 1):
+for i in range(0, len(triangle) - 1):
+    for x in range(0, len(triangle[i]) - 1):
         if triangle[i][x] > triangle[i][x+1]:
             triangle[i+1][x] += triangle[i][x]
         else:
             triangle[i+1][x] += triangle[i][x+1]
 
 print(triangle[len(triangle)-1])
-                    
-        
-
-#print(triangle)
 print ("Time =", time.time()-start, "s")

@@ -1,8 +1,8 @@
-#A program to calclate the sum of all digits reulting from 2 to the power of 1000
-
+"""
+Solution to Project Euler Problem 16
+"""
 import time
 
-#Variables
 start = time.time()
 power = 2 ** 1000
 total = 0

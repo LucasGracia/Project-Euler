@@ -1,10 +1,13 @@
+"""
+Solution to Project Euler Problem 7
+"""
 import time
 
-#Working Variables
 x = 15
 isPrimeBool = False
-primeList = [2,3,5,7,11,13]
+primeList = [2, 3, 5, 7, 11, 13]
 startTime = time.time()
+
 
 def isPrime(x):
     isPrimeBool = False
@@ -18,12 +21,9 @@ def isPrime(x):
     return True
 
 
-
-
 while len(primeList) != 10001:
     isPrimeBool = isPrime(x)
     if isPrimeBool:
-        #Add number to primeList
         primeList.append(x)
         x += 2
     else:

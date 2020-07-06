@@ -1,7 +1,6 @@
 import time
 import math
 
-#Variables
 start = time.time()
 number = math.factorial(100)
 count = 0
