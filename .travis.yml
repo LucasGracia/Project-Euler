@@ -4,7 +4,9 @@ matrix:
       python:
         - "3.7"
       before_install:
+        - pwd
         - cd python
+        - pwd
         - python --version
         - pip install -U pip
         - pip install -U pytest
