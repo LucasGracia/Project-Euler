@@ -1,4 +1,7 @@
 jobs:
   include:
     - stage: python
+      language: python
+      python:
+        - "3.7"
       script: python3 python/1.py
