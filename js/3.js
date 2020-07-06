@@ -5,7 +5,7 @@
  * factor of the number 600851475143 ?
  */
 function isPrime (x) {
-  for (var i = 2; i < x; i++) {
+  for (var i = 2; i < Math.sqrt(x); i++) {
     if (x % i === 0) {
       return false
     }
@@ -15,7 +15,7 @@ function isPrime (x) {
 
 let number = 600851475143
 let divisor = 2
-let primeFactors = []
+const primeFactors = []
 while (number > 1) {
   if (isPrime(divisor)) {
     if (number % divisor === 0) {
