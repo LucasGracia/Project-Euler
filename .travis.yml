@@ -8,6 +8,9 @@ matrix:
         - python --version
         - pip install -U pip
         - pip install -U pytest
+        - pip install -U pylint
       install:
         - pip install -r requirements.txt
+      before_script:
+        - python3 -m pylint *
       script: pytest
