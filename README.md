@@ -1,4 +1,3 @@
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 # Project-Euler
 Solutions to the problems found on projecteuler.net in multiple languages
 
@@ -7,6 +6,7 @@ Solutions to the problems found on projecteuler.net in multiple languages
 ## Go
 
 ## JavaScript
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Python
 
