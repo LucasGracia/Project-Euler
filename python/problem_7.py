@@ -16,7 +16,6 @@ def is_prime(number):
         if number % i == 0:
             return False
         i += 1
-    print("List length: ", len(primeList))
     return True
 
 
