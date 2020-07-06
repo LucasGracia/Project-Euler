@@ -1,7 +1,12 @@
+"""
+Solution to Project Euler Problem 11
+    In a given 20x20 grid, what is the greatest product of 4 adjacent numbers
+    in the same direction (up, down, left, right, diagonally)?
+"""
 import time
 
 start = time.time()
-product = 1
+PRODUCT = 1
 number = [
     8,
     2,
@@ -406,52 +411,52 @@ number = [
 ]
 
 
-def horizontal(myList, index):
+def horizontal(my_list, index):
+    """Calculate the product off 4 horizontally adjacent numbers."""
     if (index + 2) % 19 == 0 or (index + 1) % 19 == 0:
         return 0
-    else:
-        return myList[index] * myList[index + 1] * myList[index + 2] * myList[index + 3]
+    return my_list[index] * my_list[index + 1] * my_list[index + 2] * my_list[index + 3]
 
 
-def vertical(myList, index):
+def vertical(my_list, index):
+    """Calculate the product of 4 vertically adjacent numbers."""
     if index > 323:
         return 0
-    else:
-        return (
-            myList[index] * myList[index + 20] * myList[index + 40] * myList[index + 60]
-        )
+    return (
+        my_list[index] * my_list[index + 20] * my_list[index + 40] * my_list[index + 60]
+    )
 
 
-def leftDiagonal(myList, index):
+def left_diagonal(my_list, index):
+    """Calculate the product of 4 (left) diagonally adjacent numbers."""
     if (index + 2) % 19 == 0 or (index + 1) % 19 == 0 or index > 323:
         return 0
-    else:
-        return (
-            myList[index] * myList[index + 21] * myList[index + 22] * myList[index + 23]
-        )
+    return (
+        my_list[index] * my_list[index + 21] * my_list[index + 22] * my_list[index + 23]
+    )
 
 
-def rightDiagonal(myList, index):
+def right_diagonal(my_list, index):
+    """Calculate the product of 4 (right) diagonally adjacent numbers."""
     if (index - 2) % 19 == 0 or (index - 1) % 19 == 0 or index == 0 or index > 323:
         return 0
-    else:
-        return (
-            myList[index] * myList[index + 19] * myList[index + 38] * myList[index + 57]
-        )
+    return (
+        my_list[index] * my_list[index + 19] * my_list[index + 38] * my_list[index + 57]
+    )
 
 
 for i in range(0, 399):
-    if horizontal(number, i) > product:
-        product = horizontal(number, i)
+    if horizontal(number, i) > PRODUCT:
+        PRODUCT = horizontal(number, i)
 
-    if vertical(number, i) > product:
-        product = vertical(number, i)
+    if vertical(number, i) > PRODUCT:
+        PRODUCT = vertical(number, i)
 
-    if leftDiagonal(number, i) > product:
-        product = leftDiagonal(number, i)
+    if left_diagonal(number, i) > PRODUCT:
+        PRODUCT = left_diagonal(number, i)
 
-    if rightDiagonal(number, i) > product:
-        product = rightDiagonal(number, i)
+    if right_diagonal(number, i) > PRODUCT:
+        PRODUCT = right_diagonal(number, i)
 
-print("Answer =", product)
+print("Answer =", PRODUCT)
 print("Time =", time.time() - start, "s")

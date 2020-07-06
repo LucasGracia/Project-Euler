@@ -1,16 +1,18 @@
+"""
+Solution to Project Euler Problem 19
+"""
 import time
 import datetime
 
 start = time.time()
-startYear = 1901
-endYear = 2000
-count = 0
+START_YEAR = 1901
+END_YEAR = 2000
+COUNT = 0
 
-for i in range(startYear, endYear):
-    print(i)
+for i in range(START_YEAR, END_YEAR):
     for x in range(1, 12 + 1):
         if datetime.date(i, x, 1).weekday() == 0:
-            count += 1
+            COUNT += 1
 
-print(count)
+print(COUNT)
 print("Time =", time.time() - start, "s")

@@ -1,10 +1,13 @@
+"""
+Solution to Project Euler Problem 17
+"""
 import time
-from num2words import num2words
 import re
+from num2words import num2words
 
 start = time.time()
 numbers = []
-sumLength = 0
+SUM_LENGTH = 0
 
 for i in range(1, 1000 + 1):
     number = num2words(i)
@@ -12,7 +15,7 @@ for i in range(1, 1000 + 1):
     numbers.append(number)
 
 for item in numbers:
-    sumLength += len(item)
+    SUM_LENGTH += len(item)
 
-print(sumLength)
+print(SUM_LENGTH)
 print("Time =", time.time() - start, "s")

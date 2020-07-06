@@ -4,11 +4,11 @@ Solution to Project Euler Problem 16
 import time
 
 start = time.time()
-power = 2 ** 1000
-total = 0
+POWER = 2 ** 1000
+TOTAL = 0
 
-for character in str(power)[:]:
-    total += int(character)
+for character in str(POWER)[:]:
+    TOTAL += int(character)
 
-print("Answer =", total)
+print("Answer =", TOTAL)
 print("Time =", time.time() - start, "s")

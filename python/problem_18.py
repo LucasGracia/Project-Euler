@@ -1,3 +1,6 @@
+"""
+Solution to Project Euler Problem 18
+"""
 import time
 
 start = time.time()

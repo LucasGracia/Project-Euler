@@ -1,5 +1,6 @@
 """
 Solution to Project Euler Problem 10
+    Find the sum of all primes below 2 million
 """
 import time
 
@@ -7,20 +8,20 @@ start = time.time()
 primes = []
 
 for i in range(2, 500000 + 1):
-    isPrime = True
+    IS_PRIME = True
     if i % 2 != 0 or i == 2:
         for x in primes:
             if i % x == 0:
-                isPrime = False
+                IS_PRIME = False
 
-        if isPrime == 1:
+        if IS_PRIME == 1:
             for y in range(2, int(i ** 0.5)):
                 if i % y == 0:
-                    isPrime = False
+                    IS_PRIME = False
     else:
-        isPrime = False
+        IS_PRIME = False
 
-    if isPrime is True:
+    if IS_PRIME is True:
         primes.append(i)
 
 print(sum(primes))
