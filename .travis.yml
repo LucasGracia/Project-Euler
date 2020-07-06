@@ -12,5 +12,5 @@ matrix:
       install:
         - pip install -r requirements.txt
       before_script:
-        - python3 -m pylint *
+        - python3 -m pylint *.py
       script: pytest
