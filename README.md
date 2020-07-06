@@ -9,6 +9,7 @@ Solutions to the problems found on projecteuler.net in multiple languages
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Python
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Performance Comparison
 **2013 MacBook Pro (2.3GHz i7)**
