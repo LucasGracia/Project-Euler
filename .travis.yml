@@ -1,8 +1,4 @@
-matrix:
+jobs:
   include:
-    - language: python
-      python:
-        - "3.7"
-      before_script:
-        - cd python
-      script: python 1.py
+    - stage: python
+      script: python3 python/1.py
