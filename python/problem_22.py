@@ -4,18 +4,18 @@ Solution to Project Euler Problem 22
 import time
 
 start = time.time()
-total = 0
+TOTAL = 0
 namesList = []
 
 
-def alphabeticScore(name, listPosition):
+def alphabetic_score(name, list_position):
     """Function that calculates an alphabetic score for a name based on
        ascii value and list position.
     """
-    alphabeticScore = 0
+    score = 0
     for character in name:
-        alphabeticScore += ord(character) - 64
-    return alphabeticScore * (listPosition + 1)
+        score += ord(character) - 64
+    return score * (list_position + 1)
 
 
 with open("names.txt", "r") as namesFile:
@@ -25,12 +25,12 @@ with open("names.txt", "r") as namesFile:
 data = data.replace(",", " ")
 data = data.replace('"', "")
 
-for name in data.split():
-    namesList.append(name)
+for single_name in data.split():
+    namesList.append(single_name)
 namesList.sort()
 
-for i in range(len(namesList)):
-    total += alphabeticScore(namesList[i], i)
-print(total)
+for index, value in enumerate(namesList):
+    TOTAL += alphabetic_score(value, index)
+print(TOTAL)
 
 print("Time =", time.time() - start, "s")

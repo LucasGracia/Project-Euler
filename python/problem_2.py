@@ -3,9 +3,6 @@ Solution to Project Euler problem 2.
     'By considering the terms in the Fibonacci sequence whose values
      do not exceed four million, find the sum of the even-valued terms.'
 """
-__author__ = "Lucas Gracia"
-__version__ = "1.0.0"
-__license__ = "MIT"
 
 import time
 import argparse

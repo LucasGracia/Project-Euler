@@ -4,21 +4,21 @@ Solution to Project Euler Problem 26
 import time
 
 start = time.time()
-answer = 0
-longest = 0
-pattern = ""
+ANSWER = 0
+LONGEST = 0
+PATTERN = ""
 
 decimals = [str(1 / float(x)) for x in range(1, 1000 + 1)]
 
-for i in range(len(decimals)):
-    for x in range(3, len(decimals[i])):
-        if decimals[i][x] == decimals[i][2]:
+for index, value in enumerate(decimals):
+    for x in range(3, len(value)):
+        if value[x] == value[2]:
             # save pattern for counting
-            pattern = decimals[i][2:x]
+            PATTERN = value[2:x]
             # see if pattern is repeated
-            if decimals[i].count(pattern) > 1:
-                if len(pattern) > longest:
-                    longest = len(pattern)
-                    answer = i
-print(answer)
+            if value.count(PATTERN) > 1:
+                if len(PATTERN) > LONGEST:
+                    LONGEST = len(PATTERN)
+                    ANSWER = index
+print(ANSWER)
 print("Time =", time.time() - start, "s")

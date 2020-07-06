@@ -5,19 +5,19 @@ import time
 
 start = time.time()
 
-previous = 1
-current = 1
-future = 0
+PREVIOUS = 1
+CURRENT = 1
+FUTURE = 0
 fibs = [1, 1]
 
-while len(str(current)) <= 1000:
-    if len(str(current)) == 1000:
-        fibs.append(current)
+while len(str(CURRENT)) <= 1000:
+    if len(str(CURRENT)) == 1000:
+        fibs.append(CURRENT)
         break
-    future = current + previous
-    previous = current
-    current = future
-    fibs.append(current)
+    FUTURE = CURRENT + PREVIOUS
+    PREVIOUS = CURRENT
+    CURRENT = FUTURE
+    fibs.append(CURRENT)
 
 print("length of fibs =", len(fibs))
 print("index of the last number in fibs:", len(fibs) - 1)

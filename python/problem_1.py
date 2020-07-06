@@ -3,10 +3,6 @@
 Solution to Project Euler problem 1.
     'Find the sum of all the multiples of 3 or 5 below 1000'
 """
-__author__ = "Lucas Gracia"
-__version__ = "1.0.0"
-__license__ = "MIT"
-
 import time
 import argparse
 
